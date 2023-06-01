@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="script.js"></script>
+
+<body>   
+ 
+  <div class="img-container">
+      
+      
+    <img class="slides" src ="img\img1.jpg" 20$ >
+    <img class="slides" src ="img\img2.jpg" 20$ >
+    <img class="slides" src ="img\img3.jpg" 20$ >
+    <img class="slides" src ="img\img4.jpg" 20$ >
+    <img class="slides" src ="img\img5.jpg" 20$ >
+    <img class="slides" src ="img\img6.jpg" 20$ >
+    <img class="slides" src ="img\img7.jpg" 20$ >
+    <img class="slides" src ="img\img8.jpg" 20$ >
+    <img class="slides" src ="img\img9.jpg" 20$ >
+    <img class="slides" src ="img\img10.jpg" 20$ >
+    <img class="slides" src ="img\img11.jpg" 20$ >
+       
+
+    <button class="btn"onclick="plusindex(-1)" id="btn1" >&#10094;</button>
+    <button class="btn"onclick="plusindex(1)" id="btn2">&#10095;</button>
+    
+  </div>
+      
+  
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style.css">
+        <title> Fly </title>
+    </head>
+
+    <body>
+    
+ <p><h1> Volar  >>>>>> </h1></p>
+ 
+    
+    
+    <div 
+    id="container">
+        
+        
+    <img class="slides" src ="img\img2.jpg" 20$ >
+    <img class="slides" src ="img\img3.jpg" 20$ >
+    <img class="slides" src ="img\img4.jpg" 20$ >
+    <img class="slides" src ="img\img5.jpg" 20$ >
+    <img class="slides" src ="img\img6.jpg" 20$ >
+    <img class="slides" src ="img\img7.jpg" 20$ >
+    <img class="slides" src ="img\img8.jpg" 20$ >
+    <img class="slides" src ="img\img9.jpg" 20$ >
+    <img class="slides" src ="img\img10.jpg" 20$>
+    <img class="slides" src ="img\img11.jpg" 20$>
+    <img class="slides" src ="img\img1.jpg" 20$  >
+
+        <button class="btn"onclick="plusindex(-1)" id="btn1" >&#10094;</button>
+        <button class="btn"onclick="plusindex(1)" id="btn2">&#10095;</button>
+        
+        
+    </div>
+    
+   <script>
+   
+   var  index =0;
+   
+   showimag (1);
+   function plusindex(n){
+       
+       index =index + 1 ;
+       showimag(index);
+   }
+   
+  function showimag(n){
+   var i ;
+   var x = document.getElementsByClassName("slides");
+  
+   if(n>x.length ) {index=1 };
+   if(n<1) {index=x.length };
+   for(i=0;i<x.length;i++)
+   {  
+     x[i].style.display = "none";
+     }
+     
+     
+       x[index-1].style.display ="block";
+       
+   } 
+   
+   
+ autoslide();
+   
+ function  autoslide(){
+     
+    var i ;
+   var x = document.getElementsByClassName("slides");
+  settimeout (autoslide,2000);
+     
+ }
+     
+       
+    
+    
+    
+    
+    
+       
+   </script> 
+    
+    
+    
+        
+    </body>
+</html>
